@@ -1,13 +1,17 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f7f7f7;
+  background-color: #121212;
+  color: #f5f5f5;
+  margin: 0;
+  padding: 0;
 }
 
 header {
-  background-color: #d32f2f;
-  color: white;
+  background-color: #1f1f1f;
+  color: #fff;
   text-align: center;
   padding: 20px;
+  position: relative;
 }
 
 nav {
@@ -18,11 +22,25 @@ nav {
 }
 
 nav button {
-  background-color: #fff;
+  background-color: #333;
+  color: white;
   border: none;
   padding: 10px;
   border-radius: 5px;
   cursor: pointer;
+}
+
+nav button:hover {
+  background-color: #444;
+}
+
+input#search {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  width: 60%;
+  max-width: 400px;
+  margin-top: 10px;
 }
 
 .products {
@@ -34,12 +52,48 @@ nav button {
 }
 
 .product {
-  background-color: white;
-  border: 1px solid #ddd;
+  background-color: #1e1e1e;
+  border: 1px solid #333;
   border-radius: 5px;
   width: 200px;
   text-align: center;
   padding: 15px;
+  transition: transform 0.2s;
+}
+
+.product:hover {
+  transform: scale(1.03);
+}
+
+.product h3 {
+  color: #fff;
+}
+
+.product p {
+  color: #ccc;
+}
+
+.product button {
+  background-color: #d32f2f;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.product button:hover {
+  background-color: #a11f1f;
+}
+
+.cart-icon {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  cursor: pointer;
+  font-size: 20px;
+  color: #fff;
 }
 
 .cart-modal {
@@ -47,11 +101,16 @@ nav button {
   top: 80px;
   right: 20px;
   width: 300px;
-  background: white;
+  background: #1e1e1e;
   padding: 20px;
   border: 2px solid #d32f2f;
   border-radius: 10px;
   z-index: 1000;
+  color: #fff;
+}
+
+.cart-modal ul {
+  padding-left: 20px;
 }
 
 .hidden {
@@ -59,11 +118,9 @@ nav button {
 }
 
 footer {
-  background-color: #d32f2f;
+  background-color: #1f1f1f;
   color: white;
   text-align: center;
   padding: 10px;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+  margin-top: 50px;
 }
